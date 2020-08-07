@@ -1,15 +1,13 @@
 <h1 align="center"> CSV-Viewer </h1>
 <!-- </h1> -->
 <p align="center">
-  <https://img.shields.io/badge/made%20with%20%E2%9D%A4%EF%B8%8F%20-java%20-orange
-
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-![](https://img.shields.io/github/commits-since/pawarashish564/AutoCompiler/1.0)
+<img src='https://img.shields.io/badge/made%20with%20%E2%9D%A4%EF%B8%8F%20-java%20-orange'> </a>
+<img src="https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github">
+<img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat">
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
 <a href="https://gitmoji.carloscuesta.me">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
-
 </p>
 <!-- <p align="center"><h1>CSVViewer</h1></p> -->
 
@@ -18,8 +16,8 @@ CSVViewer is command line csv viewer in Pure Java.
 
 # Install
 
-```
-git clone 
+```sh
+git clone https://github.com/pawarashish564/CSV-Viewer.git
 javac CSVViewer.java
 csv-viewer.bat 
 ```
@@ -27,7 +25,7 @@ csv-viewer.bat
 
 using `p` or `path` option
 
-```
+```sh
 csv-viewer.bat -p _example/example.csv
 ```
 
@@ -35,7 +33,7 @@ csv-viewer.bat -p _example/example.csv
 
 ### Default
 
-```
+```sh
  $ csv-viewer.bat -p demo.csv
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
@@ -58,7 +56,7 @@ csv-viewer.bat -p _example/example.csv
 
 set display rows num.
 
-```
+```sh
  $ csv-viewer.bat -p _example/example.csv -l 2
 +===================+=====+=====+=====+
 | Str               | f1  | f2  | int |
@@ -72,7 +70,7 @@ set display rows num.
 
 set display condition.
 
-```
+```sh
  $ csv-viewer.bat -p Demo.csv -f "f1 > 3.5"
  +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
@@ -88,7 +86,7 @@ set display condition.
 +=====================+=====+=====+=====+
 ```
 
-```
+```sh
  $ csv-viewer.bat -p Demo.csv -f "f1 < 3.5"
 +===================+=====+=====+=====+
 | Str               | f1  | f2  | int |
@@ -103,13 +101,11 @@ set display condition.
 
 #### And
 
-#### Or 
-work in progress
--->
+#### Or -->
 
 ### Sorting Options
 
-```
+```sh
  $ csv-viewer.bat -p Demo.csv -s "Str"
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
@@ -129,7 +125,7 @@ work in progress
 +=====================+=====+=====+=====+
 ```
 
-```
+```sh
  $ csv-viewer.bat -p Demo.csv -s "Str DESC"
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
@@ -147,12 +143,10 @@ work in progress
 | Big Bang Theory     | 9.2 | 9.5 | 9   |
 | 20/20               | 4.1 | 3.7 | 3   |
 +=====================+=====+=====+=====+
-
-
 ```
 # Usage
 
-```
+```sh
  $ csv-viewer -h
 Usage of csviewer:
   -f value

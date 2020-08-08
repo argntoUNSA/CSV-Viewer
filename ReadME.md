@@ -1,7 +1,7 @@
 <h1 align="center"> CSV-Viewer </h1>
 <!-- </h1> -->
 <p align="center">
-<img src='https://img.shields.io/badge/made%20with%20%E2%9D%A4%EF%B8%8F%20-java%20-orange'> </a>
+<img src='https://img.shields.io/badge/made%20with%20%E2%9D%A4%EF%B8%8F%20-java%20-orange'>
 <img src="https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github">
 <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat">
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
@@ -52,6 +52,29 @@ csv-viewer.bat -p _example/example.csv
 | Tech Study          | 8.9 | 8.9 | 8   |
 +=====================+=====+=====+=====+
 ```
+### Column Specific
+
+```sh
+ $ csv-viewer.bat -p demo.csv  -o "f1,int,f2,Str"
+ +=====+=====+=====+=====================+
+| f1  | int | f2  | Str                 |
+|=====|=====|=====|=====================|
+| 7.6 | 7   | 7.4 | Witcher             |
+| 4.1 | 3   | 4.1 | TBC Hours Mystery   |
+| 4.1 | 3   | 3.9 | TBC Hours Mystery-2 |
+| 4.1 | 3   | 3.7 | 20/20               |
+| 2.7 | 2   | 2.6 | Nightline           |
+| 4.1 | 3   | 4.1 | Dateline Friday     |
+| 3.5 | 3   | 3.2 | Dateline Sunday     |
+| 1.2 | 3   | 1.5 | Life On the Train   |
+| 9.2 | 9   | 9.5 | Big Bang Theory     |
+| 1.8 | 1   | 5.6 | Demo Cycle          |
+| 6.7 | 10  | 8.9 | Colors              |
+| 8.9 | 8   | 8.9 | Tech Study          |
++=====+=====+=====+=====================+
+```
+
+
 ### Limit Option
 
 set display rows num.
@@ -155,6 +178,8 @@ Usage of csviewer:
         set max display rows num
   -p string
         set csv file path
+  -o "col1,col2 ,.."
+        display specific columns      
   -s string
         sort by set value
         ex) col [DESC]?
@@ -163,4 +188,3 @@ Usage of csviewer:
 # TODO
 
 - [x] Set multi filters 
-- [x] Column Selection similar to that of SQL

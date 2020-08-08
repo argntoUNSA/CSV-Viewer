@@ -21,12 +21,11 @@ public class CSVViewer {
             System.out.println("\t\tset max display rows num");
             System.out.println("\t-p string");
             System.out.println("\t\tset csv file path");
+            System.out.println("\t-o \"col1,col2,..\"");
+            System.out.println("\t\tset csv file path");
             System.out.println("\t-s string");
             System.out.println("\t\tsort by set value");
             System.out.println("\t\teg. col [ASC/DESC]?");
-
-
-
 
         } else {
 
@@ -39,7 +38,7 @@ public class CSVViewer {
                 }
             }
 
-            //            System.out.println(options);
+            // System.out.println(options);
             List<String> file = Files.readAllLines(Paths.get(options.get("p")));
 
             List<String> header = Arrays.asList(file.get(0).split(","));
@@ -50,6 +49,7 @@ public class CSVViewer {
             data.remove(0);
 
             if (options.containsKey("s")) {
+
                 String sort_str = options.get("s");
 
                 String[] split = sort_str.split(" ");
@@ -115,28 +115,28 @@ public class CSVViewer {
 
             if (options.containsKey("o")) {
                 String[] opt = options.get("o").split(",");
-                
-                List<Integer> ind = new ArrayList<>();
-                for(String ot:opt)
-                {
-                    ind.add(header.indexOf(ot));
-                }
 
-                List<Integer> aList = new ArrayList<>();
-                for (int i = 0; i < header.size(); i++) {
-                    aList.add(i);
+                List<Integer> ind = new ArrayList<>();
+                for (String o : opt) {
+                    ind.add(header.indexOf(o));
                 }
-                // aList.retainAll(ind);
-                aList.removeAll(ind);
-                // System.out.println(ind);
-                // System.out.println(aList);
-                for(int i=0;i<data.size();i++)
-                {
-                    for(int a:aList)
-                    {
-                        data.get(i).remove(a);
+                List<List<String>> tmp = new ArrayList<>();
+                for (int i = 0; i < data.size(); i++) {
+                    tmp.add(new ArrayList<>());
+                    // tmp.get(i).
+                    for (int j = 0; j < ind.size(); j++) {
+                        String ele = data.get(i).get(ind.get(j));
+                        tmp.get(i).add(ele);
                     }
                 }
+                List<String> header2 = new ArrayList<>();
+                for (int s : ind) {
+                    header2.add(  header.get(s) );
+                
+                }
+
+                header = header2;
+                data = tmp;
             }
 
             // 0 1 2 3

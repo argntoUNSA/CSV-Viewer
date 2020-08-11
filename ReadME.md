@@ -25,7 +25,7 @@ $>  csv-viewer
 ```
 ### From File
 
-using `p` or `path` option
+using `p` option
 
 ```sh
 $> csv-viewer -p _example/example.csv

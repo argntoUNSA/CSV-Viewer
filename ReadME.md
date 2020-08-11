@@ -17,16 +17,17 @@ CSVViewer is command line csv viewer in Pure Java.
 # Install
 
 ```sh
-git clone https://github.com/pawarashish564/CSV-Viewer.git
-javac CSVViewer.java
-csv-viewer.bat 
+$ > git clone https://github.com/pawarashish564/CSV-Viewer.git
+$ > cd CSV-Viewer
+$ > javac CSVViewer.java
+$ > csv-viewer 
 ```
 ### From File
 
 using `p` or `path` option
 
 ```sh
-csv-viewer.bat -p _example/example.csv
+csv-viewer -p _example/example.csv
 ```
 
 ## Display Options
@@ -34,7 +35,7 @@ csv-viewer.bat -p _example/example.csv
 ### Default
 
 ```sh
- $ csv-viewer.bat -p demo.csv
+ $ csv-viewer -p demo.csv
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
 |=====================|=====|=====|=====|
@@ -55,7 +56,7 @@ csv-viewer.bat -p _example/example.csv
 ### Column Specific
 
 ```sh
- $ csv-viewer.bat -p demo.csv  -o "f1,int,f2,Str"
+ $ csv-viewer -p demo.csv  -o "f1,int,f2,Str"
  +=====+=====+=====+=====================+
 | f1  | int | f2  | Str                 |
 |=====|=====|=====|=====================|
@@ -80,7 +81,7 @@ csv-viewer.bat -p _example/example.csv
 set display rows num.
 
 ```sh
- $ csv-viewer.bat -p _example/example.csv -l 2
+ $ csv-viewer -p _example/example.csv -l 2
 +===================+=====+=====+=====+
 | Str               | f1  | f2  | int |
 |===================|=====|=====|=====|
@@ -94,7 +95,7 @@ set display rows num.
 set display condition.
 
 ```sh
- $ csv-viewer.bat -p Demo.csv -f "f1 > 3.5"
+ $ csv-viewer -p Demo.csv -f "f1 > 3.5"
  +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
 |=====================|=====|=====|=====|
@@ -110,7 +111,7 @@ set display condition.
 ```
 
 ```sh
- $ csv-viewer.bat -p Demo.csv -f "f1 < 3.5"
+ $ csv-viewer -p Demo.csv -f "f1 < 3.5"
 +===================+=====+=====+=====+
 | Str               | f1  | f2  | int |
 |===================|=====|=====|=====|
@@ -129,7 +130,7 @@ set display condition.
 ### Sorting Options
 
 ```sh
- $ csv-viewer.bat -p Demo.csv -s "Str"
+ $ csv-viewer -p Demo.csv -s "Str"
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
 |=====================|=====|=====|=====|
@@ -149,7 +150,7 @@ set display condition.
 ```
 
 ```sh
- $ csv-viewer.bat -p Demo.csv -s "Str DESC"
+ $ csv-viewer -p Demo.csv -s "Str DESC"
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
 |=====================|=====|=====|=====|

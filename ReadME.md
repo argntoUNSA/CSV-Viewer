@@ -1,8 +1,8 @@
 <h1 align="center"> CSV-Viewer </h1>
-<!-- </h1> -->
 <p align="center">
 <img src="logo.svg">
-
+</p>
+<p align="center">
 <img src='https://img.shields.io/badge/made%20with%20%E2%9D%A4%EF%B8%8F%20-java%20-orange'>
 <img src="https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github">
 <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat">

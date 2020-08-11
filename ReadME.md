@@ -2,6 +2,7 @@
 <!-- </h1> -->
 <p align="center">
 <img src="logo.svg">
+
 <img src='https://img.shields.io/badge/made%20with%20%E2%9D%A4%EF%B8%8F%20-java%20-orange'>
 <img src="https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github">
 <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat">
@@ -12,7 +13,7 @@
 </p>
 <!-- <p align="center"><h1>CSVViewer</h1></p> -->
 
-CSVViewer is command line csv viewer in Pure Java.
+CSV-Viewer is command line csv viewer in Pure Java.
 
 # Install
 
@@ -226,3 +227,4 @@ Usage of csviewer:
 # TODO
 
 - [ ] Set multi filters
+- [ ] limit option support in JSON

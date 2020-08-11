@@ -48,6 +48,24 @@ public class CSVViewer {
             // remove header from data
             data.remove(0);
 
+            //to json
+            if(options.containsKey("j"))
+            {
+                System.out.println("[");
+                for(int i=0;i<data.size();i++)
+                {
+                    System.out.println("\t{");
+                    for (int j = 0; j < data.get(i).size(); j++) {
+                        System.out.print("\t\t");
+                        System.out.print("\""+header.get(j)+"\":\""+data.get(i).get(j)+"\"");
+                        System.out.println(j == data.get(i).size()-1?"":",");
+                    }
+
+                    System.out.println(i == data.size() -1 ?"\t}":"\t},");
+                }
+                System.out.println("]");
+                System.exit(0);
+            }
             if (options.containsKey("s")) {
 
                 String sort_str = options.get("s");

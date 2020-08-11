@@ -14,15 +14,15 @@
 
 CSVViewer is command line csv viewer in Pure Java.
 
-
 # Install
 
 ```sh
 $>  git clone https://github.com/pawarashish564/CSV-Viewer.git
 $>  cd CSV-Viewer
 $>  javac CSVViewer.java
-$>  csv-viewer 
+$>  csv-viewer
 ```
+
 ### From File
 
 using `p` option
@@ -54,6 +54,7 @@ $> csv-viewer -p _example/example.csv
 | Tech Study          | 8.9 | 8.9 | 8   |
 +=====================+=====+=====+=====+
 ```
+
 ### Column Specific
 
 ```sh
@@ -76,6 +77,37 @@ $> csv-viewer -p _example/example.csv
 +=====+=====+=====+=====================+
 ```
 
+### JSON Output
+
+```sh
+$> csv-viewer -p demo.csv -j
+[
+        {
+                "Str":"Witcher",
+                "f1":"7.6",
+                "f2":"7.4",
+                "int":"7"
+        },
+        {
+                "Str":"TBC Hours Mystery",
+                "f1":"4.1",
+                "f2":"4.1",
+                "int":"3"
+        },
+        {
+                "Str":"TBC Hours Mystery-2",
+                "f1":"4.1",
+                "f2":"3.9",
+                "int":"3"
+        },
+        {
+                "Str":"20/20",
+                "f1":"4.1",
+                "f2":"3.7",
+                "int":"3"
+        }
+]
+```
 
 ### Limit Option
 
@@ -121,7 +153,8 @@ set display condition.
 | Demo Cycle        | 1.8 | 5.6 | 1   |
 +===================+=====+=====+=====+
 ```
-<!-- 
+
+<!--
 ### Multiple Filter Option
 
 #### And
@@ -169,6 +202,7 @@ set display condition.
 | 20/20               | 4.1 | 3.7 | 3   |
 +=====================+=====+=====+=====+
 ```
+
 # Usage
 
 ```sh
@@ -181,12 +215,14 @@ Usage of csviewer:
   -p string
         set csv file path
   -o "col1,col2 ,.."
-        display specific columns      
+        display specific columns
   -s string
         sort by set value
         ex) col [DESC]?
+  -j
+      for json output
 ```
 
 # TODO
 
-- [x] Set multi filters 
+- [ ] Set multi filters

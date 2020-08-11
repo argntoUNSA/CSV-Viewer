@@ -32,36 +32,35 @@ public class CSVViewer {
             // System.out.println(Arrays.asList(args));
             Map<String, String> options = new HashMap<>();
 
-            for (int i = 0; i + 1 < args.length; i++) {
+            for (int i = 0; i < args.length; i++) {
                 if (args[i].charAt(0) == '-') {
-                    options.put(args[i].charAt(1) + "", args[i + 1]);
+                    // System.out.printf("%d %d \n",i,args.length);
+                    options.put(args[i].charAt(1) + "", i + 1 == args.length ? "." : args[i + 1]);
                 }
             }
 
             // System.out.println(options);
             List<String> file = Files.readAllLines(Paths.get(options.get("p")));
-
+            options.remove("p");
             List<String> header = Arrays.asList(file.get(0).split(","));
 
             List<List<String>> data = file.stream().map(e -> Arrays.asList(e.split(","))).collect(Collectors.toList());
 
             // remove header from data
             data.remove(0);
-
-            //to json
-            if(options.containsKey("j"))
-            {
+            System.out.println(options + " " + Arrays.toString(args));
+            // to json
+            if (options.containsKey("j")) {
                 System.out.println("[");
-                for(int i=0;i<data.size();i++)
-                {
+                for (int i = 0; i < data.size(); i++) {
                     System.out.println("\t{");
                     for (int j = 0; j < data.get(i).size(); j++) {
                         System.out.print("\t\t");
-                        System.out.print("\""+header.get(j)+"\":\""+data.get(i).get(j)+"\"");
-                        System.out.println(j == data.get(i).size()-1?"":",");
+                        System.out.print("\"" + header.get(j) + "\":\"" + data.get(i).get(j) + "\"");
+                        System.out.println(j == data.get(i).size() - 1 ? "" : ",");
                     }
 
-                    System.out.println(i == data.size() -1 ?"\t}":"\t},");
+                    System.out.println(i == data.size() - 1 ? "\t}" : "\t},");
                 }
                 System.out.println("]");
                 System.exit(0);
@@ -149,8 +148,8 @@ public class CSVViewer {
                 }
                 List<String> header2 = new ArrayList<>();
                 for (int s : ind) {
-                    header2.add(  header.get(s) );
-                
+                    header2.add(header.get(s));
+
                 }
 
                 header = header2;

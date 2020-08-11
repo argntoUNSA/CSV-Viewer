@@ -1,6 +1,7 @@
 <h1 align="center"> CSV-Viewer </h1>
 <!-- </h1> -->
 <p align="center">
+<img src="logo.svg">
 <img src='https://img.shields.io/badge/made%20with%20%E2%9D%A4%EF%B8%8F%20-java%20-orange'>
 <img src="https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github">
 <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat">
@@ -17,17 +18,17 @@ CSVViewer is command line csv viewer in Pure Java.
 # Install
 
 ```sh
-$ > git clone https://github.com/pawarashish564/CSV-Viewer.git
-$ > cd CSV-Viewer
-$ > javac CSVViewer.java
-$ > csv-viewer 
+$>  git clone https://github.com/pawarashish564/CSV-Viewer.git
+$>  cd CSV-Viewer
+$>  javac CSVViewer.java
+$>  csv-viewer 
 ```
 ### From File
 
 using `p` or `path` option
 
 ```sh
-csv-viewer -p _example/example.csv
+$> csv-viewer -p _example/example.csv
 ```
 
 ## Display Options
@@ -35,7 +36,7 @@ csv-viewer -p _example/example.csv
 ### Default
 
 ```sh
- $ csv-viewer -p demo.csv
+ $> csv-viewer -p demo.csv
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
 |=====================|=====|=====|=====|
@@ -56,7 +57,7 @@ csv-viewer -p _example/example.csv
 ### Column Specific
 
 ```sh
- $ csv-viewer -p demo.csv  -o "f1,int,f2,Str"
+ $> csv-viewer -p demo.csv  -o "f1,int,f2,Str"
  +=====+=====+=====+=====================+
 | f1  | int | f2  | Str                 |
 |=====|=====|=====|=====================|
@@ -81,7 +82,7 @@ csv-viewer -p _example/example.csv
 set display rows num.
 
 ```sh
- $ csv-viewer -p _example/example.csv -l 2
+ $> csv-viewer -p _example/example.csv -l 2
 +===================+=====+=====+=====+
 | Str               | f1  | f2  | int |
 |===================|=====|=====|=====|
@@ -95,7 +96,7 @@ set display rows num.
 set display condition.
 
 ```sh
- $ csv-viewer -p Demo.csv -f "f1 > 3.5"
+ $> csv-viewer -p Demo.csv -f "f1 > 3.5"
  +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
 |=====================|=====|=====|=====|
@@ -111,7 +112,7 @@ set display condition.
 ```
 
 ```sh
- $ csv-viewer -p Demo.csv -f "f1 < 3.5"
+ $> csv-viewer -p Demo.csv -f "f1 < 3.5"
 +===================+=====+=====+=====+
 | Str               | f1  | f2  | int |
 |===================|=====|=====|=====|
@@ -130,7 +131,7 @@ set display condition.
 ### Sorting Options
 
 ```sh
- $ csv-viewer -p Demo.csv -s "Str"
+ $> csv-viewer -p Demo.csv -s "Str"
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
 |=====================|=====|=====|=====|
@@ -150,7 +151,7 @@ set display condition.
 ```
 
 ```sh
- $ csv-viewer -p Demo.csv -s "Str DESC"
+ $> csv-viewer -p Demo.csv -s "Str DESC"
 +=====================+=====+=====+=====+
 | Str                 | f1  | f2  | int |
 |=====================|=====|=====|=====|
@@ -171,7 +172,7 @@ set display condition.
 # Usage
 
 ```sh
- $ csv-viewer -h
+ $> csv-viewer -h
 Usage of csviewer:
   -f value
         filter

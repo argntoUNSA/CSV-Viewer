@@ -89,11 +89,11 @@
 		</br>
 		For this, you should go to the <a href="https://github.com/argntoUNSA/CSV-Viewer">project's repository</a> on GitHub and click on the previously named file.
 		</br>
-		<img src="" alt="Clicking Installer-Windows.exe">
+		<img src="https://i.postimg.cc/1z2Hq6Hj/Seleccionar-Instalador.png" alt="Clicking Installer-Windows.exe">
 		</br>
 		Then proceed to download it by pressing the indicated button
 		</br>
-		<img src="" alt="Downloading Installer-Windows.exe">
+		<img src="https://i.postimg.cc/FzQVP4wb/Descargar-Instalador.png" alt="Downloading Installer-Windows.exe">
 		</br>
 	</p>
   <li>

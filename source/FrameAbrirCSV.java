@@ -6,6 +6,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 public class FrameAbrirCSV extends JFrame{
     private static final int FrameW=350;
     private static final int FrameH=350;
@@ -22,18 +25,25 @@ public class FrameAbrirCSV extends JFrame{
     
     public FrameAbrirCSV(){
         super("CSV Viewer");
+        setIconImage(getIconImage());
+        
         this.contentPane = getContentPane();
         
         cargarPaneles();
         
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        
         this.setLocation(250, 250);
         //setSize(FrameW, FrameH);
         pack();
         setResizable(false);
     }
-    
+    @Override
+    public Image getIconImage() {
+       Image retValue = Toolkit.getDefaultToolkit()
+        .getImage(getClass().getResource("logoCSV.png"));
+       return retValue;
+    }
     public void cargarPaneles(){
         this.isCSV = false;
         cargarComponentes();
@@ -162,13 +172,12 @@ public class FrameAbrirCSV extends JFrame{
             
             if(checkJSON.isSelected()){
                 //abrir Json
-                FrameTablaFinal newFrame = new FrameTablaFinal(csvFile, true);
-                dispose();
+                FrameTablaFinal newFrame = new FrameTablaFinal(this, csvFile, true);
             }else{
                 //abrir panel configuracion previa
-                FramePreConfigCSV newFrame = new FramePreConfigCSV(csvFile);
-                dispose();
+                FramePreConfigCSV newFrame = new FramePreConfigCSV(this, csvFile);
             }
+            dispose();
         }
     }
 }

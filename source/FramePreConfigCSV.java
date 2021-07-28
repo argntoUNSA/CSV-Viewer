@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 public class FramePreConfigCSV extends JFrame{
     static GraphicsDevice device = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()[0];
     private Container contentPane;
@@ -71,9 +74,14 @@ public class FramePreConfigCSV extends JFrame{
     private Boolean allOK;
     
     private FramePreConfigCSV instance;
+    private JFrame panelAnterior;
     
-    public FramePreConfigCSV(CSV csvFile){
+    public FramePreConfigCSV(JFrame panelAnterior, CSV csvFile){
         super("CSV Viewer - "+ ( (csvFile!=null)? csvFile.getDireccion() : "null"  ));
+        setIconImage(getIconImage());
+        
+        this.panelAnterior = panelAnterior;
+        
         this.contentPane = getContentPane();
         this.csvFile = csvFile;
         
@@ -88,6 +96,12 @@ public class FramePreConfigCSV extends JFrame{
         //device.setFullScreenWindow(this);
         
         this.instance =this;
+    }
+    @Override
+    public Image getIconImage() {
+       Image retValue = Toolkit.getDefaultToolkit()
+        .getImage(getClass().getResource("logoCSV.png"));
+       return retValue;
     }
     
     private void cargarComponentes(){
@@ -507,7 +521,8 @@ public class FramePreConfigCSV extends JFrame{
         this.btnCancelar= new JButton("Cancelar");
         this.btnCancelar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent evento){
-                FrameAbrirCSV newFrame = new FrameAbrirCSV();
+                //FrameAbrirCSV newFrame = new FrameAbrirCSV();
+                panelAnterior.setVisible(true);
                 dispose();
             }
         });
@@ -589,8 +604,7 @@ public class FramePreConfigCSV extends JFrame{
                 if(allOK){
                     //MUESTRO TABLA
                     FrameTablaFinal newFrame = new FrameTablaFinal(instance, csvFile);
-                    instance.setVisible(false);
-                    //dispose();
+                    dispose();
                 }
             }
         });

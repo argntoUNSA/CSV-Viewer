@@ -6,6 +6,8 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 
 public class FrameTablaFinal extends JFrame{
     private CSV csvFile, csvOriginal;
@@ -18,17 +20,18 @@ public class FrameTablaFinal extends JFrame{
     private JTextArea textArea;
     private JTable tabla;
     
-    private FramePreConfigCSV panelAnterior;
+    private JFrame panelAnterior;
     
-    public FrameTablaFinal(FramePreConfigCSV panelAnterior, CSV csvFile){
-        this(csvFile,false);
-        this.panelAnterior = panelAnterior;
+    public FrameTablaFinal(JFrame panelAnterior, CSV csvFile){
+        this(panelAnterior, csvFile,false);
     }
     
-    public FrameTablaFinal(CSV csvFile, boolean JSON){
+    public FrameTablaFinal(JFrame panelAnterior, CSV csvFile, boolean JSON){
         super("CSV Viewer - "+ ( (csvFile!=null)? csvFile.getDireccion() : "null"  ) );
+        setIconImage(getIconImage());
         this.csvFile = csvFile;
         this.JSON = JSON;
+        this.panelAnterior = panelAnterior;
         
         try{
             this.csvOriginal = new CSV(csvFile.getDireccion());
@@ -44,7 +47,12 @@ public class FrameTablaFinal extends JFrame{
         
         cargaComponentes();
         
-        
+    }
+    @Override
+    public Image getIconImage() {
+       Image retValue = Toolkit.getDefaultToolkit()
+        .getImage(getClass().getResource("logoCSV.png"));
+       return retValue;
     }
     
     private void cargaComponentes(){
@@ -80,13 +88,12 @@ public class FrameTablaFinal extends JFrame{
         this.btnVolver = new JButton("Volver");
         this.btnVolver.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent event){
-                if(JSON){
+                /*if(JSON){
                     FrameAbrirCSV newFrame = new FrameAbrirCSV();
                 }else{
                     //FramePreConfigCSV newFrame = new FramePreConfigCSV(csvOriginal);
-                    panelAnterior.setVisible(true);
-                }
-                
+                }*/
+                panelAnterior.setVisible(true);
                 dispose();
             }
         });

@@ -8,221 +8,155 @@
 <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat">
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
 <a href="https://gitmoji.carloscuesta.me">
-  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+  <img src="https://img.shields.io/badge/gitmoji-%20??%20??-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
 </p>
 <!-- <p align="center"><h1>CSVViewer</h1></p> -->
 
-CSV-Viewer is command line csv viewer in Pure Java.
+<p>
+  CSVViewer is free and open source software that allows you to view CSV files. Developed in Java.
+ </p>
+
+# General description
+<p>
+  It consists of 3 instances represented by 3 windows which are interconnected, then instances will serve as a guide for using the program:
+    <ol>
+      <li>
+        <p>Selection instance of the CSV type file.
+          </br>
+          This is the first instance, it starts when you run the program (CSVViewer.jar). 
+          </br>
+          It allows us to choose a file, this must be of the CSV type. 
+          </br>
+          <img src="https://i.postimg.cc/8kZZZLLK/Inicio.png" alt="Open-Start Window">
+        </p>
+      <li>
+        <p>
+          Instance of preconfiguration of the visualization in table format.
+          </br>
+          This is the second instance, it starts when you select and open a file of the CSV type, to preconfigure it and view it as a table.
+          </br>
+          <img src="https://i.postimg.cc/xjk30hwQ/inicio.png" alt="Preset-start window">
+        </p>
+      <li>
+        <p>
+          Display instance of the CSV file in the selected format.
+          </br>
+          This is the second or third instance according to the format chosen in the first instance. This instance allows us to view the CSV file in 2 formats:
+          </br>
+          <ul>
+            <li>
+              <p>
+                Visualization of the file "demo.csv" in table format.
+                </br>
+                <img src="https://i.postimg.cc/d0k8jS8v/inicio-Tabla.png" alt="View Window-Table">
+              </p>
+            <li>
+              <p>
+                Visualization of the file "demo.csv" in JSON format
+                </br>
+                <a href='https://postimages.org/' target='_blank'>
+                  <img src='https://i.postimg.cc/rpwqBvhX/inicio-JSON.png' border='0' alt='View Window-JSON'/>
+                </a>
+              </p>
+          </ul>
+        </p>
+    </ol>
+</p>
+
+# Minimum requirements
+
+<ol>
+  <li>
+  <p>
+	Java SE (JRE) installed and updated. If you do not have it or want to update it, follow <a href="https://www.java.com">this link</a>
+  </p>
+
+  <li>
+  <p>
+	Java SE as the default program to open a JAR file.
+  </p>
+</ol>
+
 
 # Install
 
-```sh
-$>  git clone https://github.com/pawarashish564/CSV-Viewer.git
-$>  cd CSV-Viewer
-$>  javac CSVViewer.java
-$>  csv-viewer
-```
+## Windows operating system
+<ol>
+  <li>
+	<p>
+		Download the EXE file called "Installer-Windows".
+		</br>
+		For this, you should go to the <a href="https://github.com/argntoUNSA/CSV-Viewer">project's repository</a> on GitHub and click on the previously named file.
+		</br>
+		<img src="" alt="Clicking Installer-Windows.exe">
+		</br>
+		Then proceed to download it by pressing the indicated button
+		</br>
+		<img src="" alt="Downloading Installer-Windows.exe">
+		</br>
+	</p>
+  <li>
+	<ul>
+    <li>
+      <p>
+        After locating the download folder
+        </br>
+        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/NFymZPxb/Abrir-Carpeta-Descargada.png" alt="Localized download folder"/></a>
+        </br></br>
+      </p>
+    <li>
+      <p>
+        Run the downloaded installer. and you will be guided by the installation wizard.
+        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/fy6msj2s/Abrir-Archivo-descargado.png" alt="Runned installer"/></a>
+        </br>
+      </p>
+  </ul>
+    
 
-### From File
+	
+</ol>
 
-using `p` option
 
-```sh
-$> csv-viewer -p _example/example.csv
-```
+# History
 
-## Display Options
+## Summary
+<p>
+  This software is a contribution to an existing project, it comes from the user <a href="https://github.com/pawarashish564"> parawarashish564 </a>. Which I work to develop a CSV file viewer that can be handled by console.
+  Our contribution was focused on refactoring the existing code thus facilitating the development of a GUI.
+  This project, then, was promoted thanks to the possibility of working with the source code that the original user developed, it goes without saying that the advantages of working with free and open source software were also what allowed this.
+  </br>
+  For more information, visit this <a href="https://github.com/pawarashish564/CSV-Viewer/network">link</a>
+</p>
 
-### Default
+## Cronology
+<ul>
+  <li>
+    <p>
+      01/07/2021 - Creating the GUI and documentation.
+      </br>
+      We apply the first modification regarding the use of the program, we create the GUI. This led to the creation of new classes, so the documentation of the project was also expanded.
+    </p>
+  <li> 
+    <p>
+      18/06/2021 - First time us made a contribution. Refactoring.
+      </br>
+      We created the corresponding fork to be able to contribute to the project and we made the first commit, which focused on organizing the original repository code, keeping everything related to the functionality and use of the software.
+    </p>
+  <li>
+    <p>
+      11/08/2020 - Last update of the project by pawarashish564.
+      </br>
+      In these updates, the user made 7 commits on the same day. In which he corrected errors, added characteristics and a small documentation of the project.
+    </p>
+  <li> 
+    <p> 
+      07/08/2020 - Creation of the original project:
+      </br>
+      User pawarashish564 creates the project and starts making changes to it. We do not know the original motivation of the project, but it focuses on the management through the console.
+    </p>
+</ul>
 
-```sh
- $> csv-viewer -p demo.csv
-+=====================+=====+=====+=====+
-| Str                 | f1  | f2  | int |
-|=====================|=====|=====|=====|
-| Witcher             | 7.6 | 7.4 | 7   |
-| TBC Hours Mystery   | 4.1 | 4.1 | 3   |
-| TBC Hours Mystery-2 | 4.1 | 3.9 | 3   |
-| 20/20               | 4.1 | 3.7 | 3   |
-| Nightline           | 2.7 | 2.6 | 2   |
-| Dateline Friday     | 4.1 | 4.1 | 3   |
-| Dateline Sunday     | 3.5 | 3.2 | 3   |
-| Life On the Train   | 1.2 | 1.5 | 3   |
-| Big Bang Theory     | 9.2 | 9.5 | 9   |
-| Demo Cycle          | 1.8 | 5.6 | 1   |
-| Colors              | 6.7 | 8.9 | 10  |
-| Tech Study          | 8.9 | 8.9 | 8   |
-+=====================+=====+=====+=====+
-```
-
-### Column Specific
-
-```sh
- $> csv-viewer -p demo.csv  -o "f1,int,f2,Str"
- +=====+=====+=====+=====================+
-| f1  | int | f2  | Str                 |
-|=====|=====|=====|=====================|
-| 7.6 | 7   | 7.4 | Witcher             |
-| 4.1 | 3   | 4.1 | TBC Hours Mystery   |
-| 4.1 | 3   | 3.9 | TBC Hours Mystery-2 |
-| 4.1 | 3   | 3.7 | 20/20               |
-| 2.7 | 2   | 2.6 | Nightline           |
-| 4.1 | 3   | 4.1 | Dateline Friday     |
-| 3.5 | 3   | 3.2 | Dateline Sunday     |
-| 1.2 | 3   | 1.5 | Life On the Train   |
-| 9.2 | 9   | 9.5 | Big Bang Theory     |
-| 1.8 | 1   | 5.6 | Demo Cycle          |
-| 6.7 | 10  | 8.9 | Colors              |
-| 8.9 | 8   | 8.9 | Tech Study          |
-+=====+=====+=====+=====================+
-```
-
-### JSON Output
-
-```sh
-$> csv-viewer -p demo.csv -j
-[
-        {
-                "Str":"Witcher",
-                "f1":"7.6",
-                "f2":"7.4",
-                "int":"7"
-        },
-        {
-                "Str":"TBC Hours Mystery",
-                "f1":"4.1",
-                "f2":"4.1",
-                "int":"3"
-        },
-        {
-                "Str":"TBC Hours Mystery-2",
-                "f1":"4.1",
-                "f2":"3.9",
-                "int":"3"
-        },
-        {
-                "Str":"20/20",
-                "f1":"4.1",
-                "f2":"3.7",
-                "int":"3"
-        }
-]
-```
-
-### Limit Option
-
-set display rows num.
-
-```sh
- $> csv-viewer -p _example/example.csv -l 2
-+===================+=====+=====+=====+
-| Str               | f1  | f2  | int |
-|===================|=====|=====|=====|
-| Witcher           | 7.6 | 7.4 | 7   |
-| TBC Hours Mystery | 4.1 | 4.1 | 3   |
-+===================+=====+=====+=====+
-```
-
-### Filter Option
-
-set display condition.
-
-```sh
- $> csv-viewer -p Demo.csv -f "f1 > 3.5"
- +=====================+=====+=====+=====+
-| Str                 | f1  | f2  | int |
-|=====================|=====|=====|=====|
-| Witcher             | 7.6 | 7.4 | 7   |
-| TBC Hours Mystery   | 4.1 | 4.1 | 3   |
-| TBC Hours Mystery-2 | 4.1 | 3.9 | 3   |
-| 20/20               | 4.1 | 3.7 | 3   |
-| Dateline Friday     | 4.1 | 4.1 | 3   |
-| Big Bang Theory     | 9.2 | 9.5 | 9   |
-| Colors              | 6.7 | 8.9 | 10  |
-| Tech Study          | 8.9 | 8.9 | 8   |
-+=====================+=====+=====+=====+
-```
-
-```sh
- $> csv-viewer -p Demo.csv -f "f1 < 3.5"
-+===================+=====+=====+=====+
-| Str               | f1  | f2  | int |
-|===================|=====|=====|=====|
-| Nightline         | 2.7 | 2.6 | 2   |
-| Life On the Train | 1.2 | 1.5 | 3   |
-| Demo Cycle        | 1.8 | 5.6 | 1   |
-+===================+=====+=====+=====+
-```
-
-<!--
-### Multiple Filter Option
-
-#### And
-
-#### Or -->
-
-### Sorting Options
-
-```sh
- $> csv-viewer -p Demo.csv -s "Str"
-+=====================+=====+=====+=====+
-| Str                 | f1  | f2  | int |
-|=====================|=====|=====|=====|
-| 20/20               | 4.1 | 3.7 | 3   |
-| Big Bang Theory     | 9.2 | 9.5 | 9   |
-| Colors              | 6.7 | 8.9 | 10  |
-| Dateline Friday     | 4.1 | 4.1 | 3   |
-| Dateline Sunday     | 3.5 | 3.2 | 3   |
-| Demo Cycle          | 1.8 | 5.6 | 1   |
-| Life On the Train   | 1.2 | 1.5 | 3   |
-| Nightline           | 2.7 | 2.6 | 2   |
-| TBC Hours Mystery   | 4.1 | 4.1 | 3   |
-| TBC Hours Mystery-2 | 4.1 | 3.9 | 3   |
-| Tech Study          | 8.9 | 8.9 | 8   |
-| Witcher             | 7.6 | 7.4 | 7   |
-+=====================+=====+=====+=====+
-```
-
-```sh
- $> csv-viewer -p Demo.csv -s "Str DESC"
-+=====================+=====+=====+=====+
-| Str                 | f1  | f2  | int |
-|=====================|=====|=====|=====|
-| Witcher             | 7.6 | 7.4 | 7   |
-| Tech Study          | 8.9 | 8.9 | 8   |
-| TBC Hours Mystery-2 | 4.1 | 3.9 | 3   |
-| TBC Hours Mystery   | 4.1 | 4.1 | 3   |
-| Nightline           | 2.7 | 2.6 | 2   |
-| Life On the Train   | 1.2 | 1.5 | 3   |
-| Demo Cycle          | 1.8 | 5.6 | 1   |
-| Dateline Sunday     | 3.5 | 3.2 | 3   |
-| Dateline Friday     | 4.1 | 4.1 | 3   |
-| Colors              | 6.7 | 8.9 | 10  |
-| Big Bang Theory     | 9.2 | 9.5 | 9   |
-| 20/20               | 4.1 | 3.7 | 3   |
-+=====================+=====+=====+=====+
-```
-
-# Usage
-
-```sh
- $> csv-viewer -h
-Usage of csviewer:
-  -f value
-        filter
-  -l int
-        set max display rows num
-  -p string
-        set csv file path
-  -o "col1,col2 ,.."
-        display specific columns
-  -s string
-        sort by set value
-        ex) col [DESC]?
-  -j
-      for json output
-```
 
 # TODO
 

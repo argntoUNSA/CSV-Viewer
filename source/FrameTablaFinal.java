@@ -1,16 +1,12 @@
 package source;
 
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
 
-/**Esta clase nos permite visualizar el contenido de un archivo CSV en formato tabla, pero tambien nos
-   permite visualizarlo en formato JSON. Si el caso es el primero, se cargara (en el panel correspondiente 
-   al contenido a mostrar) un objeto del tipo TableForCSV. Si es el segundo, se cargara un JTextArea. 
-   En ambos casos se cargara un boton que permitira cerrar esta ventana para volver a una anterior, por
-   defecto esta ventana sera, dependiendo del caso, FramePreConfigCSV o FrameAbrirCSV.
- */
+
 public class FrameTablaFinal extends JFrame{
     private CSV csvFile, csvOriginal;
     private boolean JSON;
@@ -21,16 +17,14 @@ public class FrameTablaFinal extends JFrame{
     private JScrollPane scrollPane;
     private JTextArea textArea;
     private JTable tabla;
-    /**Este constructor nos permite, a partir de un archivo CSV, mostrar una tabla representativa
-      *@param csvFile Una instancia de la clase CSV la cual representa a un archivo CSV existente. El contenido de este sera representado como tabla. 
-       */
-    public FrameTablaFinal(CSV csvFile){
+    
+    private FramePreConfigCSV panelAnterior;
+    
+    public FrameTablaFinal(FramePreConfigCSV panelAnterior, CSV csvFile){
         this(csvFile,false);
+        this.panelAnterior = panelAnterior;
     }
-    /**Este constructor nos permite, a partir de un archivo CSV y de una variable booleana de control, construir una ventana y  mostrar el contenido en formato de tabla o formato JSON segun sea el valor de la variable de control.
-      *@param csvFile Una instancia de la clase CSV la cual representa a un archivo CSV existente. El contenido de este sera representado como tabla. 
-      *@param JSON variable booleana de control para determinar en que formato debe mostrarse el contenido del archivo CSV. 
-       */
+    
     public FrameTablaFinal(CSV csvFile, boolean JSON){
         super("CSV Viewer - "+ ( (csvFile!=null)? csvFile.getDireccion() : "null"  ) );
         this.csvFile = csvFile;
@@ -38,8 +32,7 @@ public class FrameTablaFinal extends JFrame{
         
         try{
             this.csvOriginal = new CSV(csvFile.getDireccion());
-        }
-        catch(Exception e){
+        }catch(Exception e){
             System.out.println("Error al obtenr copia del CSV");
         } 
 
@@ -53,11 +46,7 @@ public class FrameTablaFinal extends JFrame{
         
         
     }
-    /**Este metodo se encarga de cargar los componentes necesarios para mostrar el archivo CSV, puede
-      mostrarse en 2 formatos por lo que este metodo decide, mediante una variable de control, cargar
-      los componentes pertinentes a dicho formato. Pero en ambos casos, este metodo cargara un boton 
-      que permitira regresar a la ventana de preconfiguracion.
-       */
+    
     private void cargaComponentes(){
         
         this.textArea = new JTextArea();
@@ -94,7 +83,8 @@ public class FrameTablaFinal extends JFrame{
                 if(JSON){
                     FrameAbrirCSV newFrame = new FrameAbrirCSV();
                 }else{
-                    FramePreConfigCSV newFrame = new FramePreConfigCSV(csvOriginal);
+                    //FramePreConfigCSV newFrame = new FramePreConfigCSV(csvOriginal);
+                    panelAnterior.setVisible(true);
                 }
                 
                 dispose();

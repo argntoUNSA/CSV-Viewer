@@ -1,13 +1,9 @@
 package source;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
-import java.awt.Image;
-import java.awt.Toolkit;
 
 public class FrameAbrirCSV extends JFrame{
     private static final int FrameW=350;
@@ -25,7 +21,11 @@ public class FrameAbrirCSV extends JFrame{
     
     public FrameAbrirCSV(){
         super("CSV Viewer");
-        setIconImage(getIconImage());
+        try{
+            setIconImage(getIconImage());
+        }catch(Exception e){
+        
+        }
         
         this.contentPane = getContentPane();
         
@@ -182,5 +182,4 @@ public class FrameAbrirCSV extends JFrame{
     }
 }
     
-
 

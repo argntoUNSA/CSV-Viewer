@@ -1,13 +1,10 @@
 package source;
 
-
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 
 public class FrameTablaFinal extends JFrame{
     private CSV csvFile, csvOriginal;
@@ -28,7 +25,11 @@ public class FrameTablaFinal extends JFrame{
     
     public FrameTablaFinal(JFrame panelAnterior, CSV csvFile, boolean JSON){
         super("CSV Viewer - "+ ( (csvFile!=null)? csvFile.getDireccion() : "null"  ) );
-        setIconImage(getIconImage());
+        try{
+            setIconImage(getIconImage());
+        }catch(Exception e){
+        
+        }
         this.csvFile = csvFile;
         this.JSON = JSON;
         this.panelAnterior = panelAnterior;
@@ -108,6 +109,4 @@ public class FrameTablaFinal extends JFrame{
         
         this.content.add(mainPanel);
     }
-    
 }
-

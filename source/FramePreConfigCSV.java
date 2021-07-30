@@ -1,6 +1,5 @@
 package source;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,9 +11,6 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
-import java.awt.Image;
-import java.awt.Toolkit;
 
 public class FramePreConfigCSV extends JFrame{
     static GraphicsDevice device = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()[0];
@@ -78,7 +74,11 @@ public class FramePreConfigCSV extends JFrame{
     
     public FramePreConfigCSV(JFrame panelAnterior, CSV csvFile){
         super("CSV Viewer - "+ ( (csvFile!=null)? csvFile.getDireccion() : "null"  ));
-        setIconImage(getIconImage());
+        try{
+            setIconImage(getIconImage());
+        }catch(Exception e){
+        
+        }
         
         this.panelAnterior = panelAnterior;
         

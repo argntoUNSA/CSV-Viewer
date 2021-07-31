@@ -14,7 +14,7 @@
 <!-- <p align="center"><h1>CSVViewer</h1></p> -->
 
 <p>
-  CSVViewer is free and open source software that allows you to view CSV files. Developed in Java.
+  CSVViewer is free and open source software to Windows, that allows you to view CSV files. Developed in Java.
  </p>
 
 # General description
@@ -67,6 +67,10 @@
 # Minimum requirements
 
 <ol>
+	<li>
+		<p>
+			Operative Sistem Windows 8 32/64 bits
+		</p>
   <li>
   <p>
 	Java SE (JRE) installed and updated. If you do not have it or want to update it, follow <a href="https://www.java.com">this link</a>
@@ -81,7 +85,10 @@
 
 # Install
 
-## Windows operating system
+<p>
+	The installation has support for all versions of Windows since 2006, not the "CSVViewer 1.5" program. However, if you would like to try it, you could inform us of your success or failure, from now on we will be grateful for your contribution.
+</p>
+	
 <ol>
   <li>
 	<p>
@@ -159,6 +166,5 @@
 
 
 # TODO
-
-- [ ] Set multi filters
-- [ ] limit option support in JSON
+- [ ] Hierarchy, when there is more than one "preset".
+- [ ] Options set no support in JSON.

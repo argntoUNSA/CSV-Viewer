@@ -1,0 +1,17 @@
+Para empezar a utilizar CSVViewer 1.5 debera darle atributos al archivo "CSVViewer.sh" desde la terminal de su Linux.
+Para esto primero debera abrir la terminal de su Linux, luego debe escribir los siguientes comnados seguidos de la tecla ENTER:
+	cd "ubicacion de la carpeta Installer-Linux"
+	chmod +x CSVViewer.sh
+Con el primer comando estaremos en la carpeta donde se encuentra nuestros archivos .jar y .sh
+Con el segundo le daremos permiso de ejecucion a nuestro archivo .sh
+
+
+----------------------------------------------------
+	---------------------------------
+
+To start using CSVViewer 1.5 you must give attributes to the file "CSVViewer.sh" from your Linux terminal.
+For this you must first open your Linux terminal, then you must type the following commands followed by the ENTER key:
+        cd "Installer-Linux folder location"
+        chmod + x CSVViewer.sh
+With the first command we will be in the folder where our .jar and .sh files are located
+With the second we will give execution permission to our .sh file
